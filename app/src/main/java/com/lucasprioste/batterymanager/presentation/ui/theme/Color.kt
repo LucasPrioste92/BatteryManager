@@ -1,4 +1,4 @@
-package com.lucasprioste.batterymanager.ui.theme
+package com.lucasprioste.batterymanager.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

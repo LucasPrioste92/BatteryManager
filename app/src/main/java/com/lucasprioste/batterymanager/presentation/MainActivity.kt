@@ -1,4 +1,4 @@
-package com.lucasprioste.batterymanager
+package com.lucasprioste.batterymanager.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,7 +9,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.lucasprioste.batterymanager.ui.theme.BatteryManagerTheme
+import com.lucasprioste.batterymanager.presentation.battery_screen.BatteryScreen
+import com.lucasprioste.batterymanager.presentation.ui.theme.BatteryManagerTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -18,9 +19,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             BatteryManagerTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize()) {
-                    Greeting("Android")
+                    BatteryScreen()
                 }
             }
         }
