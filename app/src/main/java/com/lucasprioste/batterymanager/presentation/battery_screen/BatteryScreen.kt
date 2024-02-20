@@ -9,11 +9,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.lucasprioste.batterymanager.domain.model.battery_manager.BatteryData
 import com.lucasprioste.batterymanager.presentation.ui.theme.BatteryManagerTheme
 
 @Composable
 fun BatteryScreen(
-
+    batteryData: BatteryData
 ){
     Column(
         modifier = Modifier
@@ -21,8 +22,8 @@ fun BatteryScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text(text = "100%")
-        Text(text = "Is Charging:")
+        Text(text = "${batteryData.level}%")
+        Text(text = "Is Charging: ${batteryData.isCharging}")
     }
 }
 
@@ -35,7 +36,7 @@ fun BatteryScreen(
 fun BatteryScreenPreview() {
     BatteryManagerTheme {
         Surface(modifier = Modifier.fillMaxSize()) {
-            BatteryScreen()
+            //BatteryScreen()
         }
     }
 }
