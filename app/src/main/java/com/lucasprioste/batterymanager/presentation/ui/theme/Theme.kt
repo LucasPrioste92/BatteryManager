@@ -2,6 +2,7 @@ package com.lucasprioste.batterymanager.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
+import androidx.compose.animation.core.Spring
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
@@ -30,6 +31,9 @@ private val lightColorScheme = lightColorScheme(
     onSurfaceVariant = Black17,
     surface = White
 )
+
+internal const val SpringDefaultDampingRatio = Spring.DampingRatioMediumBouncy
+internal const val SpringDefaultStiffness = Spring.StiffnessLow
 
 @Composable
 fun BatteryManagerTheme(
