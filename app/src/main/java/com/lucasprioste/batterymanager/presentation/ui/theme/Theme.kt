@@ -1,4 +1,4 @@
-package com.lucasprioste.batterymanager.ui.theme
+package com.lucasprioste.batterymanager.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
