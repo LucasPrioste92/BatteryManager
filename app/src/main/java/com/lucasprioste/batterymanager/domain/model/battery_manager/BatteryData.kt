@@ -1,9 +1,9 @@
 package com.lucasprioste.batterymanager.domain.model.battery_manager
 
 import android.os.BatteryManager
-import com.lucasprioste.batterymanager.core.battery_manager.broadcastReceiver.BatteryChangePublisher.Companion.DEFAULT_ICON
-import com.lucasprioste.batterymanager.core.battery_manager.broadcastReceiver.BatteryChangePublisher.Companion.DEFAULT_INT
-import com.lucasprioste.batterymanager.core.battery_manager.broadcastReceiver.BatteryChangePublisher.Companion.DEFAULT_LONG
+import com.lucasprioste.batterymanager.core.battery_manager.batteryBroadcastReceiver.BatteryManager.Companion.DEFAULT_ICON
+import com.lucasprioste.batterymanager.core.battery_manager.batteryBroadcastReceiver.BatteryManager.Companion.DEFAULT_INT
+import com.lucasprioste.batterymanager.core.battery_manager.batteryBroadcastReceiver.BatteryManager.Companion.DEFAULT_LONG
 import java.util.Date
 
 data class BatteryData(

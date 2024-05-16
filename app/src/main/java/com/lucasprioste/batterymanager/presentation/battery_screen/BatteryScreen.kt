@@ -10,7 +10,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.lucasprioste.batterymanager.domain.model.battery_manager.BatteryData
-import com.lucasprioste.batterymanager.presentation.battery_screen.components.TimeWave
 import com.lucasprioste.batterymanager.presentation.ui.theme.BatteryManagerTheme
 
 @Composable
