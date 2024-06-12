@@ -1,9 +1,9 @@
 package com.lucasprioste.batterymanager.core.battery_manager
 
 import android.content.Context
-import com.lucasprioste.batterymanager.core.battery_manager.batteryBroadcastReceiver.BatteryManager
-import com.lucasprioste.batterymanager.core.battery_manager.batteryBroadcastReceiver.BatteryListener
-import com.lucasprioste.batterymanager.domain.model.battery_manager.BatteryData
+import com.lucasprioste.batterymanager.core.battery_manager.broadcast_receiver.BatteryController
+import com.lucasprioste.batterymanager.core.battery_manager.broadcast_receiver.BatteryListener
+import com.lucasprioste.batterymanager.core.battery_manager.model.BatteryData
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -18,11 +18,11 @@ class BatteryObserverImp(
                 launch { send(data) }
             }
         }
-        val batteryManager = BatteryManager(context = context, listener = batteryListener)
+        val batteryController = BatteryController(context = context, listener = batteryListener)
 
-        batteryManager.registerReceiver()
+        batteryController.registerReceiver()
         awaitClose {
-            batteryManager.unRegisterReceiver()
+            batteryController.unRegisterReceiver()
         }
     }.distinctUntilChanged()
 }
