@@ -1,4 +1,4 @@
-# Battery Manager
+# EnergyDroid
 Application under development whose main objective is to obtain information regarding the Android device's battery using Google's BatteryManager library.
 
 ## Description
