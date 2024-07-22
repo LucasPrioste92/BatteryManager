@@ -1,16 +1,17 @@
-package com.lucasprioste.batterymanager.core.battery_manager.model
+package com.lucasprioste.energydroid.domain.model
 
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_CAPACITY
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_CHARGE_COUNTER
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_CHARGING
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_CURRENT_AVERAGE
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_CURRENT_NOW
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_ENERGY_COUNTER
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_LEVEL
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_PRESENT
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_SCALE
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_TEMPERATURE
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_VOLTAGE
+
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_CAPACITY
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_CHARGE_COUNTER
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_CHARGING
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_CURRENT_AVERAGE
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_CURRENT_NOW
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_ENERGY_COUNTER
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_LEVEL
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_PRESENT
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_SCALE
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_TEMPERATURE
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_VOLTAGE
 import java.time.LocalDateTime
 
 /**

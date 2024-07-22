@@ -1,4 +1,4 @@
-package com.lucasprioste.batterymanager.core.battery_manager.broadcast_receiver
+package com.lucasprioste.energydroid.data.broadcast_receiver
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -6,17 +6,17 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.BatteryManager
 import android.os.Build
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_LEVEL
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_PLUGGED
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_PRESENT
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_SCALE
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_TEMPERATURE
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_VOLTAGE
-import com.lucasprioste.batterymanager.core.battery_manager.util.toBatteryHealthStatus
-import com.lucasprioste.batterymanager.core.battery_manager.util.toBatteryPlugged
-import com.lucasprioste.batterymanager.core.battery_manager.util.toBatteryStatus
-import com.lucasprioste.batterymanager.core.battery_manager.model.BatteryData
-import com.lucasprioste.batterymanager.core.battery_manager.model.BatteryStatus
+import com.lucasprioste.energydroid.domain.model.BatteryData
+import com.lucasprioste.energydroid.domain.model.BatteryStatus
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_LEVEL
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_PLUGGED
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_PRESENT
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_SCALE
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_TEMPERATURE
+import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_VOLTAGE
+import com.lucasprioste.energydroid.util.toBatteryHealthStatus
+import com.lucasprioste.energydroid.util.toBatteryPlugged
+import com.lucasprioste.energydroid.util.toBatteryStatus
 import java.time.LocalDateTime
 
 /**

@@ -1,6 +1,6 @@
-package com.lucasprioste.batterymanager.core.battery_manager
+package com.lucasprioste.energydroid
 
-import com.lucasprioste.batterymanager.core.battery_manager.model.BatteryData
+import com.lucasprioste.energydroid.domain.model.BatteryData
 import kotlinx.coroutines.flow.Flow
 
 interface BatteryObserver {
@@ -15,4 +15,5 @@ interface BatteryObserver {
      * @see BatteryData
      */
     fun observe(): Flow<BatteryData>
+    suspend fun latestData(): BatteryData
 }

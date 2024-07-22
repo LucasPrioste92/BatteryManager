@@ -2,7 +2,7 @@ package com.lucasprioste.batterymanager.presentation.battery_screen
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.lucasprioste.batterymanager.core.battery_manager.BatteryObserver
+import com.lucasprioste.energydroid.BatteryObserver
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -22,7 +22,7 @@ class BatteryViewModel @Inject constructor(
         getInfoBattery()
     }
 
-    private fun getInfoBattery(){
+    private fun getInfoBattery() {
         viewModelScope.launch {
             batteryObserver.observe().collect{ data ->
                 _uiState.update { it.copy(batteryInfo = data) }

@@ -1,8 +1,8 @@
 package com.lucasprioste.batterymanager.di
 
 import android.content.Context
-import com.lucasprioste.batterymanager.core.battery_manager.BatteryObserver
-import com.lucasprioste.batterymanager.core.battery_manager.BatteryObserverImp
+import com.lucasprioste.energydroid.BatteryObserver
+import com.lucasprioste.energydroid.EnergyDroid
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,8 +16,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun providesBatteryObserver(@ApplicationContext context: Context): BatteryObserver{
-        return BatteryObserverImp(context = context)
+    fun providesBatteryObserver(@ApplicationContext context: Context): BatteryObserver {
+        return EnergyDroid(context = context)
     }
 
 }

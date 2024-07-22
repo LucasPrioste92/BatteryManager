@@ -1,4 +1,4 @@
-package com.lucasprioste.batterymanager.core.battery_manager.model
+package com.lucasprioste.energydroid.domain.model
 
 /**
  * Represents the plugged state of a battery.
