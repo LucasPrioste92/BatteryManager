@@ -2,7 +2,6 @@ package com.lucasprioste.batterymanager.core.battery_manager
 
 import android.content.Context
 import com.lucasprioste.batterymanager.core.battery_manager.broadcast_receiver.BatteryController
-import com.lucasprioste.batterymanager.core.battery_manager.broadcast_receiver.BatteryListener
 import com.lucasprioste.batterymanager.core.battery_manager.model.BatteryData
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
@@ -15,12 +14,12 @@ class BatteryObserverImp(
     private val context: Context,
 ): BatteryObserver {
     override fun observe() = callbackFlow {
-        val batteryListener = object : BatteryListener {
-            override fun change(data: BatteryData) {
+        val batteryController = BatteryController(
+            context = context,
+            listener = { data ->
                 launch { send(data) }
-            }
-        }
-        val batteryController = BatteryController(context = context, listener = batteryListener)
+            },
+        )
 
         batteryController.registerReceiver()
         awaitClose {

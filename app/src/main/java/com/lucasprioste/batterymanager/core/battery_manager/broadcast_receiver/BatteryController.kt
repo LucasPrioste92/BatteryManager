@@ -6,6 +6,8 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.BatteryManager
 import android.os.Build
+import com.lucasprioste.batterymanager.core.battery_manager.model.BatteryData
+import com.lucasprioste.batterymanager.core.battery_manager.model.BatteryStatus
 import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_LEVEL
 import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_PLUGGED
 import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_PRESENT
@@ -15,8 +17,6 @@ import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryV
 import com.lucasprioste.batterymanager.core.battery_manager.util.toBatteryHealthStatus
 import com.lucasprioste.batterymanager.core.battery_manager.util.toBatteryPlugged
 import com.lucasprioste.batterymanager.core.battery_manager.util.toBatteryStatus
-import com.lucasprioste.batterymanager.core.battery_manager.model.BatteryData
-import com.lucasprioste.batterymanager.core.battery_manager.model.BatteryStatus
 import java.time.LocalDateTime
 
 /**
@@ -24,14 +24,14 @@ import java.time.LocalDateTime
  *
  * This class extends [BroadcastReceiver] and is responsible for registering and unregistering
  * a broadcast receiver to listen for battery change events. It processes the received battery
- * change intents and extracts relevant battery information to notify a [BatteryListener].
+ * change intents and extracts relevant battery information to notify lambada function [listener].
  *
  * @property context The context in which the receiver is running.
  * @property listener The listener to notify with battery data changes.
  */
 class BatteryController(
     private val context: Context,
-    private val listener: BatteryListener
+    private val listener: (BatteryData) -> Unit
 ): BroadcastReceiver() {
     /**
      * A [BatteryManager] instance to access battery-related information and properties.
@@ -90,8 +90,8 @@ class BatteryController(
             batteryManager.computeChargeTimeRemaining()
         else null
 
-        listener.change(
-            data = BatteryData(
+        listener(
+            BatteryData(
                 timestamp = LocalDateTime.now(),
                 level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, DEFAULT_LEVEL),
                 isCharging = isCharging,
