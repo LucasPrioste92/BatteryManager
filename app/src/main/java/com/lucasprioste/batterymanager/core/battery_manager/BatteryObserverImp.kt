@@ -7,6 +7,8 @@ import com.lucasprioste.batterymanager.core.battery_manager.model.BatteryData
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.take
 import kotlinx.coroutines.launch
 
 class BatteryObserverImp(
@@ -25,4 +27,6 @@ class BatteryObserverImp(
             batteryController.unRegisterReceiver()
         }
     }.distinctUntilChanged()
+
+    override suspend fun latestData(): BatteryData = observe().take(1).first()
 }

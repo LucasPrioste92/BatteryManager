@@ -15,4 +15,14 @@ interface BatteryObserver {
      * @see BatteryData
      */
     fun observe(): Flow<BatteryData>
+    /**
+     * Retrieves the latest [BatteryData].
+     *
+     * This function is a suspend function that fetches and returns the most recent
+     * [BatteryData] available. It is designed to be called within a coroutine or another suspend function.
+     *
+     * @return The most recent [BatteryData] object.
+     * @see BatteryData
+     */
+    suspend fun latestData(): BatteryData
 }
