@@ -31,8 +31,8 @@ import java.time.LocalDateTime
  * @property present Whether the battery is present in the device.
  * @property plugged The type of power source that the device is plugged into.
  * @property capacity Remaining battery capacity as an integer percentage of total capacity (with no fractional part).
- * @property chargeCounter The charge counter of the battery in microampere-hours.
- * @property currentAverage The average current of the battery in microamperes. Positive values indicate net current entering the battery from a charge source, negative values indicate net current discharging from the battery..
+ * @property chargeCounter The charge counter of the battery in microamps-hours.
+ * @property currentAverage The average current of the battery in microamps. Positive values indicate net current entering the battery from a charge source, negative values indicate net current discharging from the battery..
  * @property currentNow The current battery current in microamperes. Positive values indicate net current entering the battery from a charge source, negative values indicate net current discharging from the battery.
  * @property energyCounter Battery remaining energy in nanowatt-hours.
  * @property batteryLow Whether the battery is currently considered to be low (for API level 28 and above).
