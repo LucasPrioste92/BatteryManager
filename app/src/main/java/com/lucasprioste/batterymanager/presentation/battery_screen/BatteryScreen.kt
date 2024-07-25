@@ -9,8 +9,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.lucasprioste.batterymanager.core.battery_manager.model.BatteryData
 import com.lucasprioste.batterymanager.presentation.ui.theme.BatteryManagerTheme
+import io.github.lucasprioste92.energydroid.domain.model.BatteryData
 
 @Composable
 fun BatteryScreen(

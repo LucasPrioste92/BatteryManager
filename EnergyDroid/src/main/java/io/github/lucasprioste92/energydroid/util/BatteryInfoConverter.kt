@@ -1,10 +1,10 @@
-package com.lucasprioste.batterymanager.core.battery_manager.util
+package io.github.lucasprioste92.energydroid.util
 
 import android.os.BatteryManager
-import com.lucasprioste.batterymanager.core.battery_manager.util.DefaultBatteryValues.DEFAULT_PLUGGED
-import com.lucasprioste.batterymanager.core.battery_manager.model.BatteryHealthStatus
-import com.lucasprioste.batterymanager.core.battery_manager.model.BatteryPlugged
-import com.lucasprioste.batterymanager.core.battery_manager.model.BatteryStatus
+import io.github.lucasprioste92.energydroid.domain.model.BatteryHealthStatus
+import io.github.lucasprioste92.energydroid.domain.model.BatteryPlugged
+import io.github.lucasprioste92.energydroid.domain.model.BatteryStatus
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_PLUGGED
 
 fun Int.toBatteryHealthStatus() = when(this) {
     BatteryManager.BATTERY_HEALTH_COLD -> BatteryHealthStatus.Cold

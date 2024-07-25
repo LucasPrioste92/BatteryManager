@@ -1,4 +1,4 @@
-package com.lucasprioste.batterymanager.core.battery_manager.util
+package io.github.lucasprioste92.energydroid.util
 
 object DefaultBatteryValues {
     const val DEFAULT_VOLTAGE = 0

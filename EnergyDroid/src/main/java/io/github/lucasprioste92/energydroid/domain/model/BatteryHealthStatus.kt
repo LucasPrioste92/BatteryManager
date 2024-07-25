@@ -1,4 +1,4 @@
-package com.lucasprioste.batterymanager.core.battery_manager.model
+package io.github.lucasprioste92.energydroid.domain.model
 
 /**
  * Represents the health status of a battery.

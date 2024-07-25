@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "BatteryManager"
 include(":app")
+include(":EnergyDroid")

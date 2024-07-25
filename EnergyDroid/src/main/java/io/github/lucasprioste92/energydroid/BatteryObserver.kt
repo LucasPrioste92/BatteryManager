@@ -1,6 +1,6 @@
-package com.lucasprioste.batterymanager.core.battery_manager
+package io.github.lucasprioste92.energydroid
 
-import com.lucasprioste.batterymanager.core.battery_manager.model.BatteryData
+import io.github.lucasprioste92.energydroid.domain.model.BatteryData
 import kotlinx.coroutines.flow.Flow
 
 interface BatteryObserver {

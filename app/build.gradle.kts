@@ -30,6 +30,7 @@ android {
         }
     }
     compileOptions {
+        isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
@@ -48,6 +49,7 @@ android {
 
 dependencies {
     // CORE
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.runtime.compose)
@@ -60,6 +62,10 @@ dependencies {
     // COMPOSE
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
+
+    // EnergyDroid
+    //implementation(project(":EnergyDroid"))
+    implementation(libs.energy.droid)
 
     // HILT
     implementation(libs.hilt.android)
