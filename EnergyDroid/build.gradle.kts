@@ -46,23 +46,22 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
-
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                afterEvaluate {
-                    from(components["release"])
-                }
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            afterEvaluate {
+                from(components["release"])
             }
         }
     }
+}
 
-    signing {
-        useGpgCmd()
-        useInMemoryPgpKeys(
-            findProperty("signing.keyId") as String?,
-            findProperty("signing.secretKey") as String?,
-            findProperty("signing.password") as String?,
-        )
-        sign(publishing.publications["release"])
-    }
+signing {
+    useGpgCmd()
+    useInMemoryPgpKeys(
+        findProperty("signing.keyId") as String?,
+        findProperty("signing.secretKey") as String?,
+        findProperty("signing.password") as String?,
+    )
+    sign(publishing.publications["release"])
+}

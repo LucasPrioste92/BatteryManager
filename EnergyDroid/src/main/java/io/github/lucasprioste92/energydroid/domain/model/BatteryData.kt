@@ -39,22 +39,76 @@ import java.time.LocalDateTime
  * @property chargeTimeRemaining The estimated remaining charge time in milliseconds, -1 if no time can be computed (for API level 29 and above).
  */
 data class BatteryData(
+    /**
+     * The time at which the battery data was recorded.
+     */
     val timestamp: LocalDateTime = LocalDateTime.now(),
+    /**
+     * The health status of the battery.
+     */
     val health: BatteryHealthStatus = BatteryHealthStatus.Unknown,
+    /**
+     * The current status of the battery (e.g., charging, full).
+     */
     val status: BatteryStatus = BatteryStatus.Unknown,
+    /**
+     * Whether the battery is currently charging.
+     */
     val isCharging: Boolean = DEFAULT_CHARGING,
+    /**
+     * The current voltage in millivolts of the battery.
+     */
     val voltage: Int = DEFAULT_VOLTAGE,
+    /**
+     * The current temperature in tenths of a degree Centigrade of the battery.
+     */
     val temperature: Int = DEFAULT_TEMPERATURE,
+    /**
+     * The technology of the battery (e.g., Li-ion).
+     */
     val technology: String? = null,
+    /**
+     * The current battery level in percentage.
+     */
     val level: Int = DEFAULT_LEVEL,
+    /**
+     * The maximum battery level.
+     */
     val scale: Int = DEFAULT_SCALE,
+    /**
+     * Whether the battery is present in the device.
+     */
     val present: Boolean = DEFAULT_PRESENT,
+    /**
+     * The type of power source that the device is plugged into.
+     */
     val plugged: BatteryPlugged = BatteryPlugged.Unknown,
+    /**
+     * Remaining battery capacity as an integer percentage of total capacity (with no fractional part).
+     */
     val capacity: Int = DEFAULT_CAPACITY,
+    /**
+     * The charge counter of the battery in microamps-hours.
+     */
     val chargeCounter: Int = DEFAULT_CHARGE_COUNTER,
+    /**
+     * The average current of the battery in microamps. Positive values indicate net current entering the battery from a charge source, negative values indicate net current discharging from the battery..
+     */
     val currentAverage: Int = DEFAULT_CURRENT_AVERAGE,
+    /**
+     * The current battery current in microamperes. Positive values indicate net current entering the battery from a charge source, negative values indicate net current discharging from the battery.
+     */
     val currentNow: Int = DEFAULT_CURRENT_NOW,
+    /**
+     * Battery remaining energy in nanowatt-hours.
+     */
     val energyCounter: Long = DEFAULT_ENERGY_COUNTER,
+    /**
+     * Whether the battery is currently considered to be low (for API level 28 and above).
+     */
     val batteryLow: Boolean? = null, // Min API Level 28
+    /**
+     * The estimated remaining charge time in milliseconds, -1 if no time can be computed (for API level 29 and above).
+     */
     val chargeTimeRemaining: Long? = null, // Min. API Level 29
 )
