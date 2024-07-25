@@ -1,4 +1,4 @@
-package com.lucasprioste.energydroid.domain.model
+package io.github.lucasprioste92.energydroid.domain.model
 
 /**
  * Represents the status of a battery.

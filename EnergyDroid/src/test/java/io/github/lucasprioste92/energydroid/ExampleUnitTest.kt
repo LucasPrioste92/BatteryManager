@@ -1,4 +1,4 @@
-package com.lucasprioste.energydroid
+package io.github.lucasprioste92.energydroid
 
 import org.junit.Test
 

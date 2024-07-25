@@ -16,6 +16,8 @@ hiltNavigationVersion = "1.2.0"
 junit4 = "4.13.2"
 appcompat = "1.7.0"
 material = "1.12.0"
+vanniktech = "0.29.0"
+energy = "0.1.0"
 
 [libraries]
 # CORE
@@ -52,6 +54,9 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
+# ENERGY DROID
+energy-droid = { group = "io.github.lucasprioste92", name = "energydroid", version.ref = "energy"}
+
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -59,3 +64,4 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 hiltAndroid = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
 kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+vanniktech-maven = { id = "com.vanniktech.maven.publish", version.ref = "vanniktech"}

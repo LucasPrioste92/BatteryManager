@@ -64,7 +64,8 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
 
     // EnergyDroid
-    implementation(project(":EnergyDroid"))
+    //implementation(project(":EnergyDroid"))
+    implementation(libs.energy.droid)
 
     // HILT
     implementation(libs.hilt.android)

@@ -1,17 +1,17 @@
-package com.lucasprioste.energydroid.domain.model
+package io.github.lucasprioste92.energydroid.domain.model
 
 
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_CAPACITY
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_CHARGE_COUNTER
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_CHARGING
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_CURRENT_AVERAGE
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_CURRENT_NOW
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_ENERGY_COUNTER
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_LEVEL
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_PRESENT
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_SCALE
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_TEMPERATURE
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_VOLTAGE
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_CAPACITY
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_CHARGE_COUNTER
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_CHARGING
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_CURRENT_AVERAGE
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_CURRENT_NOW
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_ENERGY_COUNTER
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_LEVEL
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_PRESENT
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_SCALE
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_TEMPERATURE
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_VOLTAGE
 import java.time.LocalDateTime
 
 /**

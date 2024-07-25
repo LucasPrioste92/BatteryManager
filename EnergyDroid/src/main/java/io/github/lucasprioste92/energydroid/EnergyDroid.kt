@@ -1,8 +1,8 @@
-package com.lucasprioste.energydroid
+package io.github.lucasprioste92.energydroid
 
 import android.content.Context
-import com.lucasprioste.energydroid.data.broadcast_receiver.BatteryController
-import com.lucasprioste.energydroid.domain.model.BatteryData
+import io.github.lucasprioste92.energydroid.data.broadcast_receiver.BatteryController
+import io.github.lucasprioste92.energydroid.domain.model.BatteryData
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.distinctUntilChanged

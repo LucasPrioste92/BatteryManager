@@ -1,6 +1,6 @@
-package com.lucasprioste.energydroid
+package io.github.lucasprioste92.energydroid
 
-import com.lucasprioste.energydroid.domain.model.BatteryData
+import io.github.lucasprioste92.energydroid.domain.model.BatteryData
 import kotlinx.coroutines.flow.Flow
 
 interface BatteryObserver {
@@ -15,5 +15,14 @@ interface BatteryObserver {
      * @see BatteryData
      */
     fun observe(): Flow<BatteryData>
+    /**
+     * Retrieves the latest [BatteryData].
+     *
+     * This function is a suspend function that fetches and returns the most recent
+     * [BatteryData] available. It is designed to be called within a coroutine or another suspend function.
+     *
+     * @return The most recent [BatteryData] object.
+     * @see BatteryData
+     */
     suspend fun latestData(): BatteryData
 }

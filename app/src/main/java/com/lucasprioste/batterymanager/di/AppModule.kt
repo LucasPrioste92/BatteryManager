@@ -1,8 +1,8 @@
 package com.lucasprioste.batterymanager.di
 
 import android.content.Context
-import com.lucasprioste.energydroid.BatteryObserver
-import com.lucasprioste.energydroid.EnergyDroid
+import io.github.lucasprioste92.energydroid.BatteryObserver
+import io.github.lucasprioste92.energydroid.EnergyDroid
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

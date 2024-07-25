@@ -1,4 +1,4 @@
-package com.lucasprioste.energydroid.data.broadcast_receiver
+package io.github.lucasprioste92.energydroid.data.broadcast_receiver
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -6,17 +6,17 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.BatteryManager
 import android.os.Build
-import com.lucasprioste.energydroid.domain.model.BatteryData
-import com.lucasprioste.energydroid.domain.model.BatteryStatus
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_LEVEL
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_PLUGGED
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_PRESENT
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_SCALE
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_TEMPERATURE
-import com.lucasprioste.energydroid.util.DefaultBatteryValues.DEFAULT_VOLTAGE
-import com.lucasprioste.energydroid.util.toBatteryHealthStatus
-import com.lucasprioste.energydroid.util.toBatteryPlugged
-import com.lucasprioste.energydroid.util.toBatteryStatus
+import io.github.lucasprioste92.energydroid.domain.model.BatteryData
+import io.github.lucasprioste92.energydroid.domain.model.BatteryStatus
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_LEVEL
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_PLUGGED
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_PRESENT
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_SCALE
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_TEMPERATURE
+import io.github.lucasprioste92.energydroid.util.DefaultBatteryValues.DEFAULT_VOLTAGE
+import io.github.lucasprioste92.energydroid.util.toBatteryHealthStatus
+import io.github.lucasprioste92.energydroid.util.toBatteryPlugged
+import io.github.lucasprioste92.energydroid.util.toBatteryStatus
 import java.time.LocalDateTime
 
 /**

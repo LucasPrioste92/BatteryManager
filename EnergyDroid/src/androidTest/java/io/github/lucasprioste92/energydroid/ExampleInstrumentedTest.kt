@@ -1,4 +1,4 @@
-package com.lucasprioste.energydroid
+package io.github.lucasprioste92.energydroid
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

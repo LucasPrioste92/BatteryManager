@@ -1,11 +1,13 @@
 plugins {
+    id("signing")
+    alias(libs.plugins.vanniktech.maven)
     id("maven-publish")
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrainsKotlinAndroid)
 }
 
 android {
-    namespace = "com.lucasprioste.energydroid"
+    namespace = "io.github.lucasprioste92.energydroid"
     compileSdk = 34
 
     defaultConfig {
@@ -34,27 +36,6 @@ android {
     }
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("EnergyDroid") {
-            groupId = "com.lucasprioste"
-            artifactId = "energydroid"
-            version = "1.0.0"
-            artifact("${layout.buildDirectory}/outputs/aar/EnergyDroid-release.aar")
-        }
-    }
-    repositories {
-        maven {
-            name = "GithubPackages"
-            url = uri("https://maven.pkg.github.com/LucasPrioste92/EnergyDroid")
-            credentials {
-                username = ""
-                password = ""
-            }
-        }
-    }
-}
-
 dependencies {
     coreLibraryDesugaring(libs.desugar.jdk.libs)
     implementation(libs.androidx.core.ktx)
@@ -64,3 +45,24 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+
+
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                afterEvaluate {
+                    from(components["release"])
+                }
+            }
+        }
+    }
+
+    signing {
+        useGpgCmd()
+        useInMemoryPgpKeys(
+            findProperty("signing.keyId") as String?,
+            findProperty("signing.secretKey") as String?,
+            findProperty("signing.password") as String?,
+        )
+        sign(publishing.publications["release"])
+    }
