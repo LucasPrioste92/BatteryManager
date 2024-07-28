@@ -7,7 +7,7 @@ This library is responsible for observing the battery of an Android device by ut
 # Setup
 ## Download
 
-Coil is available on `mavenCentral()`.
+EnergyDroid is available on `mavenCentral()`.
 
 ```kotlin
 implementation("io.github.lucasprioste92:energydroid:0.1.1")
