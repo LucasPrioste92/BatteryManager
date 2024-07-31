@@ -3,6 +3,13 @@ package io.github.lucasprioste92.energydroid
 import io.github.lucasprioste92.energydroid.domain.model.BatteryData
 import kotlinx.coroutines.flow.Flow
 
+/**
+ * Interface for observing battery data on an Android device.
+ *
+ * The [BatteryObserver] interface provides methods to observe changes in the device's battery
+ * status and retrieve the latest battery data. It allows developers to implement
+ * reactive and coroutine-based handling of battery information.
+ */
 interface BatteryObserver {
     /**
      * Observes battery data changes and emits them as a [Flow] of [BatteryData].
