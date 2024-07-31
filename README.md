@@ -10,7 +10,7 @@ This library is responsible for observing the battery of an Android device by ut
 EnergyDroid is available on `mavenCentral()`.
 
 ```kotlin
-implementation("io.github.lucasprioste92:energydroid:0.1.1")
+implementation("io.github.lucasprioste92:energydroid:0.1.2")
 ```
 
 ## Project Under API 26
